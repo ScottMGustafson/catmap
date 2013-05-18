@@ -35,13 +35,14 @@ Mat catmap(Mat oldimg){
   return(newimg);
 }
 
-bool squareImage(Mat img){
+void squareImage(Mat img){
 //test for square image.  
   if(img.rows==img.cols){
-    return true;
+    return;
   }else{
-    std::cout<<"critical error: need square image"<<std::endl;
-    return false;
+    std::cerr<<"critical error: need square image"<<std::endl;
+    std::exit(1);
+    return;
   }
 }
 
@@ -50,17 +51,13 @@ int main(){
   Mat img = imread("cat.jpg");
   int maxIter = 3*img.cols;    //max number of iterations.
 
+  squareImage(img);
+
   show(img);
   for(iter=0;iter<maxIter;iter++){
-    if (!squareImage(img)){
-      return 0;  
-    }
     catmap(img).copyTo(img);
     show(img);
   }
 
   return 0;
 }
-
-
-
