@@ -4,7 +4,9 @@ email: s1gustaf@gmail.com
 A simple program illustrating Arnold's Cat Map using opencv.
 This is an example of a chaotic mapping of a square image
 with N rows and N columns exhibiting Poincare recurrence 
-after some number of iterations.
+after some number of iterations.  I saw this in my statistical 
+mechanics class when learning about ergodic theory so I wanted 
+to try it out for myself.
 
 The transformation is:
 
