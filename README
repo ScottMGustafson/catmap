@@ -1,0 +1,19 @@
+Written by Scott Gustafson
+email: s1gustaf@gmail.com
+
+A simple program illustrating Arnold's Cat Map using opencv.
+this is an example of a chaotic mapping of a square image
+with N rows and N columns.  This transformation exhibits
+Poincare recurrence after some number of iterations.
+
+the transformation is:
+
+  x(n+1) = (2*x(n)+y(n)) mod(N)
+  y(n+1) = (x(n) + y(n)) mod(N)
+
+In general, the recurrence time, T is:
+log(N)/(golden ratio) < T < 3*N 
+
+for more information:
+http://en.wikipedia.org/wiki/Cat_map
+
